@@ -1,19 +1,17 @@
-package guru.qa.tests;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import guru.qa.drivers.DriverSwitcher;
-import guru.qa.drivers.drivers_all.RealOrEmulatorDriver;
-import guru.qa.helpers.Attach;
+import drivers.DriverSwitcher;
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static guru.qa.helpers.Attach.sessionId;
+import static helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {

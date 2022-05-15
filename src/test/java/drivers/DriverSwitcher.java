@@ -1,7 +1,7 @@
-package guru.qa.drivers;
+package drivers;
 
-import guru.qa.drivers.drivers_all.BrowserStackMobileDriver;
-import guru.qa.drivers.drivers_all.RealOrEmulatorDriver;
+import drivers.drivers_all.BrowserStackMobileDriver;
+import drivers.drivers_all.RealOrEmulatorDriver;
 
 public class DriverSwitcher {
 

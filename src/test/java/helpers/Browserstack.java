@@ -1,20 +1,17 @@
-package guru.qa.helpers;
+package helpers;
+
+import config.Credentials;
 
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
 public class Browserstack {
-    // todo hide with Owner
-    // DO NOT STORE CREDENTIALS, ONLY FOR EXAMPLE
-    public static String
-            browserstackLogin = "tpuretest_lSVWc2",
-            browserstackPassword = "Ggd5nW19cyeGseGGn2m6";
 
     public static String videoUrl(String sessionId) {
         String url = format("https://api-cloud.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()
-                .auth().basic(browserstackLogin, browserstackPassword)
+                .auth().basic(Credentials.config.user(), Credentials.config.key())
                 .log().all()
                 .when()
                 .get(url)
