@@ -37,6 +37,6 @@ public class TestBase {
         Attach.pageSource();
 
         step("Verify content found", Selenide::closeWebDriver);
-        //Attach.video(sessionId);
+        Attach.video(sessionId);
     }
 }
